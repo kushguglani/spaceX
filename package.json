@@ -6,7 +6,8 @@
     "node": ">=10.15"
   },
   "scripts": {
-    "start": "env-cmd -f .env.development node scripts/start.js",
+    "develop": "env-cmd -f .env.development node scripts/start.js",
+    "start": " node scripts/start.js",
     "build": "env-cmd -f .env.development node scripts/build.js",
     "test": "env-cmd -f .env.test react-scripts test --env=jest-environment-jsdom-sixteen",
     "test:coverage:unit": "react-scripts test --watchAll=false --env=jest-environment-jsdom-sixteen --coverage --testPathPattern=\"unit.test.js\" --verbose",
@@ -81,7 +82,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dev-utils": "^9.1.0",
