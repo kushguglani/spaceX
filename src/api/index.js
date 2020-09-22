@@ -1,13 +1,16 @@
 import axios from 'axios';
 
+console.log(process.env);
 export const api = {
   spaceX: {
     all: () => {
-      return axios.get(`${process.env.BASE_URL}/api/spaceXdata`);
+      return axios.get(`${process.env.PUBLIC_URL}/api/spaceXdata`);
     },
     filter: (filterData) => {
       return axios.get(
-        `${process.env.BASE_URL}/api/filter?data=${JSON.stringify(filterData)}`
+        `${process.env.PUBLIC_URL}/api/filter?data=${JSON.stringify(
+          filterData
+        )}`
       );
     },
   },

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import Head from './Head';
 import { useServerData } from './../state/serverDataContext';
@@ -34,6 +34,7 @@ const LoadableFooter = Loadable({
 
 const App = () => {
   const serverSpaceX = useServerData((data) => data.spaceX || []);
+  console.log(serverSpaceX);
   const [spacex, setSpaceX] = useState(serverSpaceX);
   const [displaySpinner, setDisplaySpinner] = useState(true);
   const [filter, setFilter] = useState({
@@ -44,6 +45,7 @@ const App = () => {
   useEffect(() => {
     console.log(filter);
     api.spaceX.filter(filter).then((res) => {
+      console.log(res.data);
       setDisplaySpinner(false);
       setSpaceX(res.data);
     });
