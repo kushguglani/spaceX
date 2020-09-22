@@ -75,7 +75,7 @@ const jsScripts = (bundles) => {
   return [...bundleFilePaths, mainJS]
     .map(
       (jsFilePath) =>
-        `<script type="text/javascript" src="${jsFilePath}" defer></script>`
+        `<script type="application/javascript" src="${jsFilePath}" defer></script>`
     )
     .join('');
 };
