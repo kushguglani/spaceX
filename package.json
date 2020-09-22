@@ -7,8 +7,8 @@
   },
   "scripts": {
     "develop": "env-cmd -f .env.development node scripts/start.js",
-    "start": " node scripts/startProd.js",
-    "build": "env-cmd -f .env.development node scripts/build.js",
+    "start": "node scripts/startProd.js",
+    "build": "node scripts/build.js",
     "test": "env-cmd -f .env.test react-scripts test --env=jest-environment-jsdom-sixteen",
     "test:coverage:unit": "react-scripts test --watchAll=false --env=jest-environment-jsdom-sixteen --coverage --testPathPattern=\"unit.test.js\" --verbose",
     "start:prod": "node scripts/startProd.js",
