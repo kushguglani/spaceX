@@ -7,43 +7,43 @@ import { api } from './../api';
 
 const LoadableSpinner = Loadable({
   loader: () => import(/* webpackChunkName: 'header' */ './spinner/Spinner'),
-  loading: () => <div>Loading...</div>
+  loading: () => <div>Loading...</div>,
 });
 
 const LoadableHeader = Loadable({
   loader: () => import(/* webpackChunkName: 'header' */ './header/Header'),
-  loading: () => <div>Loading...</div>
+  loading: () => <div>Loading...</div>,
 });
 
 const LoadableFilter = Loadable({
   loader: () =>
     import(/* webpackChunkName: 'home' */ './filter/FilterContainer'),
-  loading: () => <div>Loading...</div>
+  loading: () => <div>Loading...</div>,
 });
 
 const LoadableSpaceBar = Loadable({
   loader: () =>
     import(/* webpackChunkName: 'home' */ './spaceBar/SpaceBarContainer'),
-  loading: () => <div>Loading...</div>
+  loading: () => <div>Loading...</div>,
 });
 
 const LoadableFooter = Loadable({
   loader: () => import(/* webpackChunkName: 'header' */ './footer/Footer'),
-  loading: () => <div>Loading...</div>
+  loading: () => <div>Loading...</div>,
 });
 
 const App = () => {
-  const serverSpaceX = useServerData(data => data.spaceX || []);
+  const serverSpaceX = useServerData((data) => data.spaceX || []);
   const [spacex, setSpaceX] = useState(serverSpaceX);
   const [displaySpinner, setDisplaySpinner] = useState(true);
   const [filter, setFilter] = useState({
     selectedYear: '',
     successfullLaunch: '',
-    successfullLanding: ''
+    successfullLanding: '',
   });
   useEffect(() => {
     console.log(filter);
-    api.spaceX.filter(filter).then(res => {
+    api.spaceX.filter(filter).then((res) => {
       setDisplaySpinner(false);
       setSpaceX(res.data);
     });

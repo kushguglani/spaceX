@@ -19,13 +19,13 @@ describe('SpaceBarContainer', () => {
         rocket: {
           rocket_id: 'falcon9',
           rocket_name: 'Falcon 9',
-          rocket_type: 'v1.1'
+          rocket_type: 'v1.1',
         },
         launch_success: true,
         links: {
-          mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png'
-        }
-      }
+          mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png',
+        },
+      },
     ];
     render(<SpaceBarContainer spacex={space} />);
   });

@@ -7,14 +7,14 @@ const SpaceBarContainer = ({ spacex }) => {
   useEffect(() => {
     const data =
       spacex.length > 0
-        ? spacex.map(space => {
+        ? spacex.map((space) => {
             const {
               flight_number,
               links,
               rocket,
               mission_id,
               launch_year,
-              launch_success
+              launch_success,
             } = space;
             return (
               <SpaceBar

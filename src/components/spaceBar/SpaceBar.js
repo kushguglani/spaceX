@@ -7,7 +7,7 @@ export default function SpaceBar(props) {
     rocket_name,
     mission_id,
     launch_year,
-    launch_success
+    launch_success,
   } = props;
   return (
     <div className="box-container space-card" key={flight_number}>
@@ -16,7 +16,7 @@ export default function SpaceBar(props) {
       <p>Mission Ids:</p>
       <ul>
         {mission_id.length > 0
-          ? mission_id.map(curr => <li key={curr}>{curr}</li>)
+          ? mission_id.map((curr) => <li key={curr}>{curr}</li>)
           : 'No missions'}
       </ul>
       <p>

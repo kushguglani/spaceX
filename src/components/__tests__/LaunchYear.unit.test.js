@@ -7,7 +7,7 @@ describe('LaunchYear', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     render(<LaunchYear filter={filter} text="Launch Year" />);
     const launchText = screen.getByText('Luanch Year');
@@ -20,7 +20,7 @@ describe('LaunchYear', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     render(
       <LaunchYear
@@ -37,7 +37,7 @@ describe('LaunchYear', () => {
     expect(setFilterSpy).toHaveBeenCalledWith({
       selectedYear: '2015',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     });
   });
 });

@@ -19,14 +19,15 @@ describe('Main', () => {
               launch_window: 0,
               rocket: {
                 rocket_id: 'falcon9',
-                rocket_name: 'Falcon 9'
+                rocket_name: 'Falcon 9',
               },
               launch_success: true,
               links: {
-                mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png'
-              }
-            }
-          ]
+                mission_patch:
+                  'https://images2.imgbox.com/ff/81/EOWojaSj_o.png',
+              },
+            },
+          ],
         }}
       >
         <BrowserRouter>

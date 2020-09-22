@@ -7,7 +7,7 @@ describe('FilterContainer', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     render(<Filter filter={filter} />);
     const FiltersText = screen.getByText('Filters');

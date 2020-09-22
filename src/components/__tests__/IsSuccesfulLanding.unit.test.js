@@ -7,7 +7,7 @@ describe('IsSuccesfulFilter', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     render(<IsSuccesfulFilter filter={filter} text="Successfull Landing" />);
     const landingext = screen.getByText('Successfull Landing');
@@ -20,7 +20,7 @@ describe('IsSuccesfulFilter', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     render(
       <IsSuccesfulFilter
@@ -39,13 +39,13 @@ describe('IsSuccesfulFilter', () => {
     expect(setFilterSpy).toHaveBeenCalledWith({
       selectedYear: '',
       successfullLaunch: true,
-      successfullLanding: ''
+      successfullLanding: '',
     });
     fireEvent.click(buttonFalse);
     expect(setFilterSpy).toHaveBeenCalledWith({
       selectedYear: '',
       successfullLaunch: false,
-      successfullLanding: ''
+      successfullLanding: '',
     });
   });
   it('toogle filter landing value on click', () => {
@@ -55,7 +55,7 @@ describe('IsSuccesfulFilter', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     render(
       <IsSuccesfulFilter
@@ -74,13 +74,13 @@ describe('IsSuccesfulFilter', () => {
     expect(setFilterSpy).toHaveBeenCalledWith({
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: true
+      successfullLanding: true,
     });
     fireEvent.click(buttonFalse);
     expect(setFilterSpy).toHaveBeenCalledWith({
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: false
+      successfullLanding: false,
     });
   });
 });

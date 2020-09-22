@@ -23,7 +23,7 @@ describe('Module', () => {
     const filter = {
       selectedYear: '',
       successfullLaunch: '',
-      successfullLanding: ''
+      successfullLanding: '',
     };
     const { container } = render(<FilterContainer filter={filter} />);
     expect(container.cloneNode(true)).toMatchSnapshot();
@@ -38,12 +38,12 @@ describe('Module', () => {
       rocket: {
         rocket_id: 'falcon9',
         rocket_name: 'Falcon 9',
-        rocket_type: 'v1.1'
+        rocket_type: 'v1.1',
       },
       launch_success: true,
       links: {
-        mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png'
-      }
+        mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png',
+      },
     };
     const { container } = render(<SpaceBarContainer spacex={space} />);
     expect(container.cloneNode(true)).toMatchSnapshot();

@@ -14,13 +14,13 @@ describe('SpaceBar', () => {
         rocket: {
           rocket_id: 'falcon9',
           rocket_name: 'Falcon 9',
-          rocket_type: 'v1.1'
+          rocket_type: 'v1.1',
         },
         launch_success: true,
         links: {
-          mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png'
-        }
-      }
+          mission_patch: 'https://images2.imgbox.com/ff/81/EOWojaSj_o.png',
+        },
+      },
     ];
     const {
       flight_number,
@@ -28,7 +28,7 @@ describe('SpaceBar', () => {
       rocket,
       mission_id,
       launch_year,
-      launch_success
+      launch_success,
     } = space[0];
     render(
       <SpaceBar

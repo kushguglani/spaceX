@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function isSuccesfulLaunch(props) {
   const { type, filter, setDisplaySpinner, setFilter } = props;
-  const toggleSuccessFull = val => {
+  const toggleSuccessFull = (val) => {
     setDisplaySpinner(true);
     filter[type] === val
       ? setFilter({ ...filter, [type]: '' })
