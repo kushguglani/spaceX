@@ -48,7 +48,7 @@ module.exports = function (envType) {
         publicPath: PUBLIC_URL + '/',
       }
     : {
-        path: resolvePath('../build'),
+        path: resolvePath('./build'),
         filename: 'static/js/[name].[chunkhash:8].js',
         chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
         publicPath: PUBLIC_URL + '/',
