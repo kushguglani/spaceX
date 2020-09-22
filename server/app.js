@@ -20,9 +20,8 @@ app.use(bodyParser.json());
 
 // Serve generated assets
 app.use(
-  PUBLIC_URL,
   express.static(path.resolve(__dirname, '../build'), {
-    maxage: Infinity
+    maxage: Infinity,
   })
 );
 
@@ -30,7 +29,7 @@ app.use(
 app.use(
   PUBLIC_URL,
   express.static(path.resolve(__dirname, '../public'), {
-    maxage: '30 days'
+    maxage: '30 days',
   })
 );
 
