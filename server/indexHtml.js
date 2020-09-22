@@ -29,8 +29,7 @@ const prefetchStyleLinks = (bundles) => {
 
   return assetFilePaths
     .map(
-      (cssFilePath) =>
-        `<link type="text/html" rel="prefetch" as="style" href="${cssFilePath}">`
+      (cssFilePath) => `<link  rel="prefetch" as="style" href="${cssFilePath}">`
     )
     .join('');
 };
@@ -46,10 +45,7 @@ const cssLinks = (bundles) => {
     .map((cssBundle) => `${PUBLIC_URL}/${cssBundle.file}`);
 
   return [mainCSS, ...bundleFilePaths]
-    .map(
-      (cssFilePath) =>
-        `<link rel="stylesheet" type="text/html" href="${cssFilePath}">`
-    )
+    .map((cssFilePath) => `<link rel="stylesheet"  href="${cssFilePath}">`)
     .join('');
 };
 
@@ -61,8 +57,7 @@ const preloadScripts = (bundles) => {
 
   return [...bundleFilePaths, mainJS]
     .map(
-      (jsFilePath) =>
-        `<link type="text/html" rel="preload" as="script" href="${jsFilePath}">`
+      (jsFilePath) => `<link rel="preload" as="script" href="${jsFilePath}">`
     )
     .join('');
 };
