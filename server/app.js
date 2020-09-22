@@ -11,7 +11,7 @@ import { spaceXRoutes } from './spaceXApi';
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
 
-// This export is used by our initialization code in /scripts
+// This export is used for initialization code in /scripts
 export const app = express();
 
 app.use(compression());

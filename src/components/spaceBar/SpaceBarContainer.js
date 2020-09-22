@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import SpaceBar from './SpaceBar';
 
-const SpaceBarContainer = props => {
+const SpaceBarContainer = ({ spacex }) => {
   const [spaceXdata, setSpaceData] = useState(null);
   useEffect(() => {
     const data =
-      props.spacex.length > 0
-        ? props.spacex.map(space => {
+      spacex.length > 0
+        ? spacex.map(space => {
             const {
               flight_number,
               links,
@@ -40,9 +40,11 @@ const SpaceBarContainer = props => {
           })
         : 'No SpaceX Found';
     setSpaceData(data);
-  }, [props.spacex]);
+  }, [spacex]);
 
   return <div className="space-container">{spaceXdata}</div>;
 };
 
 export default SpaceBarContainer;
+// useeffecct ->comp rem
+//render

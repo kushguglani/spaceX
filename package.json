@@ -8,7 +8,6 @@
   "scripts": {
     "start": "env-cmd -f .env.development node scripts/start.js",
     "build": "env-cmd -f .env.development node scripts/build.js",
-    "test2": "node scripts/test.js",
     "test": "env-cmd -f .env.test react-scripts test --env=jest-environment-jsdom-sixteen",
     "test:coverage:integration": "react-scripts test --watchAll=false --env=jest-environment-jsdom-sixteen --coverage --testPathPattern=\"integration.test.js\" --verbose",
     "test:coverage:unit": "react-scripts test --watchAll=false --env=jest-environment-jsdom-sixteen --coverage --testPathPattern=\"unit.test.js\" --verbose",
@@ -74,7 +73,6 @@
     "helmet": "^3.23.3",
     "husky": "^3.1.0",
     "import-glob-loader": "^1.1.0",
-    "isomorphic-unfetch": "^3.0.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "lodash-webpack-plugin": "^0.11.5",
@@ -106,7 +104,16 @@
     "webpack-node-externals": "^1.7.2"
   },
   "jest": {
-    "restoreMocks": true
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/index.js",
+      "!**/main.js",
+      "!**/polyfills.js",
+      "!**/httpClient.js",
+      "!**/spaceXdataApi.js"
+    ]
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.2.1",

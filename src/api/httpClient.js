@@ -1,15 +1,15 @@
-import fetch from 'isomorphic-unfetch';
+// import fetch from 'isomorphic-unfetch';
+import axios from 'axios';
 
 export function httpClient(baseURL) {
   return {
     get: (path, options) => {
-      return fetch(baseURL + path, options).then(res => {
-        if (!res.ok) {
+      return axios(baseURL + path, options).then(res => {
+        if (!res.status === 200) {
           throw new Error(res.statusText);
         }
-
-        return res.json();
+        return res.data;
       });
-    },
+    }
   };
 }
