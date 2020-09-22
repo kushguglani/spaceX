@@ -22,6 +22,7 @@ const resolvePath = (relativePath) => path.resolve(__dirname, relativePath);
  * This function generates a webpack config object for the client-side bundle.
  */
 module.exports = function (envType) {
+  console.log(envType);
   const IS_DEV = envType === 'development';
   const IS_PROD = envType === 'production';
   const config = {};
@@ -49,8 +50,8 @@ module.exports = function (envType) {
       }
     : {
         path: resolvePath('../build'),
-        filename: 'static/js/[name].[chunkhash:8].js',
-        chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+        filename: '[name].[chunkhash:8].js',
+        chunkFilename: '[name].[chunkhash:8].chunk.js',
         publicPath: PUBLIC_URL + '/',
       };
 
