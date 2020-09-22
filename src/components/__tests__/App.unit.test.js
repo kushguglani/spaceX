@@ -5,7 +5,7 @@ import { ServerDataProvider } from '../../state/serverDataContext';
 import App from '../App';
 
 describe('App', () => {
-  it('renders default App', () => {
+  it('renders default App with server data', () => {
     render(
       <BrowserRouter>
         <ServerDataProvider

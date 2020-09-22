@@ -20,7 +20,7 @@ const Head = () => {
       <link
         rel="shortcut icon"
         // href={`${process.env.PUBLIC_URL}/favicon.ico?v1`}
-        href='https://images2.imgbox.com/ff/81/EOWojaSj_o.png'
+        href="https://images2.imgbox.com/ff/81/EOWojaSj_o.png"
       />
     </Helmet>
   );
