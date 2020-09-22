@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-console.log(process.env);
 export const api = {
   spaceX: {
     all: () => {

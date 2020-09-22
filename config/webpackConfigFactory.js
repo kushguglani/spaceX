@@ -14,7 +14,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { getAppEnv } = require('./env');
 
 const env = getAppEnv();
-const { PUBLIC_URL } = process.env;
+const { PUBLIC_URL = '' } = env.raw;
+console.log(PUBLIC_URL);
 
 const resolvePath = (relativePath) => path.resolve(__dirname, relativePath);
 
@@ -22,7 +23,6 @@ const resolvePath = (relativePath) => path.resolve(__dirname, relativePath);
  * This function generates a webpack config object for the client-side bundle.
  */
 module.exports = function (envType) {
-  console.log(envType);
   const IS_DEV = envType === 'development';
   const IS_PROD = envType === 'production';
   const config = {};
@@ -50,8 +50,8 @@ module.exports = function (envType) {
       }
     : {
         path: resolvePath('../build'),
-        filename: '[name].[chunkhash:8].js',
-        chunkFilename: '[name].[chunkhash:8].chunk.js',
+        filename: 'static/js/[name].[chunkhash:8].js',
+        chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
         publicPath: PUBLIC_URL + '/',
       };
 

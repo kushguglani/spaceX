@@ -13,14 +13,11 @@ export const spaceXRoutes = () => {
   spaceXRoutes.get('/api/spaceXdata', (_req, res) => {
     axios
       .get('https://api.spaceXdata.com/v3/launches?limit=100')
-      .then(response => {
+      .then((response) => {
         res.json(response.data);
       });
   });
   spaceXRoutes.get('/api/filter', (_req, res) => {
-    console.log(_req.body);
-    console.log(_req.params);
-    console.log(_req.query);
     let paramsData = JSON.parse(_req.query.data);
     let launch_success = paramsData.successfullLaunch;
     let land_success = paramsData.successfullLanding;
@@ -29,7 +26,7 @@ export const spaceXRoutes = () => {
       .get(
         `https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${launch_success}&land_success=${land_success}&launch_year=${launch_year}`
       )
-      .then(response => {
+      .then((response) => {
         res.json(response.data);
       });
   });

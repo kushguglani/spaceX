@@ -34,7 +34,6 @@ const LoadableFooter = Loadable({
 
 const App = () => {
   const serverSpaceX = useServerData((data) => data.spaceX || []);
-  console.log(serverSpaceX);
   const [spacex, setSpaceX] = useState(serverSpaceX);
   const [displaySpinner, setDisplaySpinner] = useState(true);
   const [filter, setFilter] = useState({
@@ -43,7 +42,6 @@ const App = () => {
     successfullLanding: '',
   });
   useEffect(() => {
-    console.log(filter);
     api.spaceX.filter(filter).then((res) => {
       console.log(res.data);
       setDisplaySpinner(false);
